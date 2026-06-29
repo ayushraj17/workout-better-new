@@ -5,6 +5,7 @@ import { drizzle } from "drizzle-orm/expo-sqlite";
 import { usersTable } from "@db/schema";
 import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
 import migrations from "@drizzle/migrations";
+import { Button } from "@/components/atomic/button";
 
 const expo = SQLite.openDatabaseSync("db.db");
 
@@ -71,8 +72,17 @@ export function DashboardScreen() {
 			}}
 		>
 			{items.map((item) => (
-				<Text key={item.id}>{item.age}</Text>
+				<Text key={item.id} className="text-amber-700">
+					{item.age}
+				</Text>
 			))}
+			<Text className="text-lg font-bold text-blue-600">Hello, Tailwind!</Text>
+
+			<Button title="Press me" variant="primary" />
+			<Button title="Press me" variant="secondary" />
+			<Button title="Press me" variant="outline" />
+			<Button title="Press me" variant="ghost" />
+			<Button title="Press me" variant="destructive" />
 		</View>
 	);
 }

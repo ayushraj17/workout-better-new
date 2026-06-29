@@ -1,2 +1,69 @@
-@import 'tailwindcss';
-@import 'uniwind';
+@import "tailwindcss";
+@import "uniwind";
+
+@layer theme {
+	:root {
+		/* Dark theme variables */
+		@variant dark {
+			--color-background: #000000;
+			--color-foreground: #ffffff;
+			--color-primary: #3b82f6;
+			--color-card: #1f2937;
+			--color-border: #374151;
+		}
+
+		/* Light theme variables */
+		@variant light {
+			--color-background: #ffffff;
+			--color-foreground: #000000;
+			--color-primary: #3b82f6;
+			--color-card: #ffffff;
+			--color-border: #e5e7eb;
+		}
+
+		/* Premium theme variables */
+		@variant premium {
+			--color-background: #1e1b4b;
+			--color-foreground: #fef3c7;
+			--color-primary: #fbbf24;
+			--color-card: #312e81;
+			--color-border: #4c1d95;
+		}
+	}
+}
+
+@utility text-sm-scaled {
+	font-size: fontScale(0.9);
+}
+
+@utility text-base-scaled {
+	font-size: fontScale();
+}
+
+@utility h-hairline {
+	height: hairlineWidth();
+}
+
+@utility w-hairline {
+	width: calc(hairlineWidth() * 10); /* 10 * device hairline width */
+}
+
+@utility w-icon {
+	width: pixelRatio();
+}
+
+@utility w-avatar {
+	width: pixelRatio(2);
+}
+
+@utility bg-adaptive {
+	background-color: light-dark(#ffffff, #1f2937);
+}
+
+@utility text-adaptive {
+	color: light-dark(#111827, #f9fafb);
+}
+
+@utility border-adaptive {
+	border-color: light-dark(#e5e7eb, #374151);
+}
