@@ -39,7 +39,7 @@ const text = tv({
 			primary: "text-primary-foreground",
 			secondary: "text-secondary-foreground",
 			outline: "text-foreground",
-			ghost: "text-foreground",
+			ghost: "text-adaptive",
 			destructive: "text-destructive-foreground",
 		},
 
