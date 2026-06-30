@@ -17,6 +17,9 @@
       ],
       "@drizzle/*": [
         "./drizzle/*"
+      ],
+      "@/assets/*": [
+        "./assets/*"
       ]
     }
   }

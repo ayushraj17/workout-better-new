@@ -7,5 +7,4 @@ config.resolver.sourceExts.push("sql");
 module.exports = withUniwindConfig(config, {
 	cssEntryFile: "./global.css",
 	dtsFile: "./src/uniwind-types.d.ts",
-	extraThemes: ["premium"], // Register your custom theme here
 });

@@ -1,11 +1,11 @@
-import { Text, View } from "react-native";
+import { Button } from "@/components/atomic/button";
+import { usersTable } from "@db/schema";
+import migrations from "@drizzle/migrations";
+import { drizzle } from "drizzle-orm/expo-sqlite";
+import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
 import * as SQLite from "expo-sqlite";
 import { useEffect, useState } from "react";
-import { drizzle } from "drizzle-orm/expo-sqlite";
-import { usersTable } from "@db/schema";
-import { useMigrations } from "drizzle-orm/expo-sqlite/migrator";
-import migrations from "@drizzle/migrations";
-import { Button } from "@/components/atomic/button";
+import { Text, View } from "react-native";
 
 const expo = SQLite.openDatabaseSync("db.db");
 
@@ -61,16 +61,7 @@ export function DashboardScreen() {
 	}
 
 	return (
-		<View
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				alignItems: "center",
-				width: "100%",
-				height: "100%",
-				justifyContent: "center",
-			}}
-		>
+		<View className="bg-adaptive flex-1">
 			{items.map((item) => (
 				<Text key={item.id} className="text-amber-700">
 					{item.age}

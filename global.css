@@ -3,31 +3,52 @@
 
 @layer theme {
 	:root {
-		/* Dark theme variables */
 		@variant dark {
-			--color-background: #000000;
-			--color-foreground: #ffffff;
-			--color-primary: #3b82f6;
-			--color-card: #1f2937;
-			--color-border: #374151;
+			--color-background: #0f0f00;
+			--color-foreground: #fdfab4;
+
+			--color-primary: #ccff00;
+			--color-primary-foreground: #000000;
+
+			--color-secondary: #00e3fd;
+			--color-secondary-foreground: #000000;
+
+			--color-muted: #151400;
+			--color-muted-foreground: #b0ae70;
+
+			--color-accent: #212100;
+			--color-accent-foreground: #fdfab4;
+
+			--color-destructive: #b92902;
+			--color-destructive-foreground: #ffffff;
+
+			--color-border: #4b4a16;
+			--color-input: #282800;
+			--color-ring: #00e3fd;
 		}
 
-		/* Light theme variables */
 		@variant light {
-			--color-background: #ffffff;
-			--color-foreground: #000000;
-			--color-primary: #3b82f6;
-			--color-card: #ffffff;
-			--color-border: #e5e7eb;
-		}
+			--color-background: #fdfcf7;
+			--color-foreground: #1c1c00;
 
-		/* Premium theme variables */
-		@variant premium {
-			--color-background: #1e1b4b;
-			--color-foreground: #fef3c7;
-			--color-primary: #fbbf24;
-			--color-card: #312e81;
-			--color-border: #4c1d95;
+			--color-primary: #5b6e00;
+			--color-primary-foreground: #ffffff;
+
+			--color-secondary: #006878;
+			--color-secondary-foreground: #ffffff;
+
+			--color-muted: #f5f4ea;
+			--color-muted-foreground: #4b4a16;
+
+			--color-accent: #e9e8db;
+			--color-accent-foreground: #1c1c00;
+
+			--color-destructive: #ba1a1a;
+			--color-destructive-foreground: #ffffff;
+
+			--color-border: #d0ceb5;
+			--color-input: #deddcc;
+			--color-ring: #006878;
 		}
 	}
 }
